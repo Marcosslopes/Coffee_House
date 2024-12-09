@@ -19,10 +19,12 @@
 
     <title>CoffeeHouse</title>
   </head>
+
+
   <body>
-    <header>
-      <nav class="navbar navbar-expand-md">
-        <div class="container">
+    <header id="header">
+      <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container pt-1">
           <i class="fa-solid fa-mug-saucer mr-4">CoffeeHouse</i> <!-- Icone -->
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,13 +36,16 @@
           <div class="collapse navbar-collapse" id="menu_nav">
               <ul class="navbar-nav mx-auto justify-content-around">
                 <li class="nav-item active">
-                  <a class="nav-link">Home</a>
+                  <a href="#home" class="nav-link">início</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#promo" class="nav-link">Promoções</a>
                 </li> 
                 <li class="nav-item">
-                  <a class="nav-link">Cardapio</a>
+                  <a href="#cardapio" class="nav-link">Menu</a>
                 </li> 
                 <li class="nav-item">
-                  <a class="nav-link">Avaliações</a>
+                  <a href="#avaliacao" class="nav-link">Avaliações</a>
                 </li>  
                 <li class="nav-item">
                     <a class="nav-link">
@@ -52,9 +57,183 @@
         </div>
       </nav>
     </header>
+    
+    <section id="home">
+      <div class="shape d-none d-md-block"></div> <!-- Forma colocada aqui -->
       
+      <div class="container pt-4">
+          <div class="row align-items-center mt-4">
+              <div class="col-md-6 d-flex flex-column align-items-center">
+                  <h1 class="display-4"> <span>Coffee</span>House</h1>
+                  <p class="text-center mt-2">Hoje é dia de se apaixonar por novas combinações de café. Experimente nosso menu especial!</p>
+                  <div class="d-flex gap-2 mt-2">
+                      <a href="#cardapio">
+                          <button type="button" class="btn btn-home">Veja o menu</button>
+                      </a>
+                      <button type="button" class="btn btn-home">
+                          <i class="fa-solid fa-phone"></i>(11) 99999-9999
+                      </button>
+                  </div>
+              </div>
+  
+              <div class="col-md-6">
+                  <img class="img-fluid d-none d-md-block" src="imagens/cafe.png">
+              </div>
+          </div>   
+      </div>
+  </section>
+  
+    <div id="separa">
+    </div>
+
+    <section id="promo">
+      <div class="container">
+        <div class="row align-items-center mt-4">
+          <div class="col-12 mb-4 d-flex text-center">
+            <h3>O <span>espírito natalino</span> já chegou ao CoffeeHouse! Venha provar nossos cafés temáticos e aproveite as <span>promoções</span> de final de ano</h3>
+          </div>
+
+          <div class="col-md-6">
+            <img class="img-fluid d-none d-md-block" src="imagens/shape.png">
+          </div>
+
+          <!-- Card de natal -->
+          <div class="col-md-6">
+            <div class="card text-center">
+              <div class="card-header">
+                Promoção de natal
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Todo mundo merece uma dose extra de alegria neste Natal! Experimente nosso Café de Panetone ou Mocha Natalino com 15% de desconto. 🎁</p>
+                <a href="#" class="btn btn-promo">Aproveitar</a>
+              </div>
+              <div class="card-footer">
+                até 28 de dezembro
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="cardapio">
+      <div class="container">
+        <div class="row align-items-center mt-4">
+          <div class="col-12">
+            <h2 class="text-center mb-4 display-4">Menu</h2>
+          </div>
+    
+          <!-- Template para os cards -->
+          <template id="card-template">
+            <div class="col-md-6">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="" class="img-fluid rounded-start" alt="">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text descricao"></p>
+                      <p class="card-text"><small class="text-muted"></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+    
+          <!-- Onde os cards serão inseridos -->
+          <div id="cards-container" class="row"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacao">
+      <div class="container">
+        <div class="row align-items-center mt-4">
+
+          <div class="col-md-4">
+
+          </div>
+
+          <div class="col-md-8">
+            <h3 class="">Avaliações	</h3>
+            <h2> O que os clientes falam </h2>
+
+            <div id="avaliado" class="mb-4 mt-4">
+
+              <img src="imagens/user.png" class="img-fluid">
+
+              <div class="tamanho">
+                <div class="d-flex espaco">
+                  <h4>Henrique</h4>
+                  <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div> 
+                </div>
+                
+                <p>Ótimos cafés, com preços super acessíveis </p> 
+              </div>
+              
+            </div>
+
+            <div id="avaliado">
+
+              <img src="imagens/user.png" class="img-fluid">
+
+              <div class="tamanho">
+                <div class="d-flex espaco">
+                  <h4>Matheus</h4>
+                  <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div> 
+                </div>
+                
+                <p>Fui e provei o Mocha Natalino, uma delicia!</p> 
+              </div>
+              
+            </div>
+
+            <div id="avaliado" class="mb-4 mt-4">
+
+              <img src="imagens/user.png" class="img-fluid">
+
+              <div class="tamanho">
+                <div class="d-flex espaco">
+                  <h4>Lucas </h4>
+                  <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div> 
+                </div>
+                
+                <p>Fui e provei o Mocha Natalino, uma delicia!</p> 
+              </div>
+              
+            </div>
 
 
-
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="javascript/script.js"></script>
   </body>
 </html>
+

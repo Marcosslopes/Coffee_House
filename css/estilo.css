@@ -4,25 +4,46 @@
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --principal: #D2B48C;
     --secundario: #8B4513;
     --verde: #556B2F;
     --cinza: #D9D9D9;
     --branco: #fff;
+    --preto: #080808;
+    --degrade: linear-gradient(to bottom, #d2b48c, #fff);
 }
 
-/* NAVBAR ------------------------------------------- */
+/* NAVBAR / Header ------------------------------------------- */
 nav{
     background-color: var(--principal);
     width: 100%;
+
+    & i{
+        color: var(--secundario);
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 0.4s ease;
+    }
+
+    & i:hover{
+        transform: scale(1.15);
+    }
+
+    & a{
+        color: var(--branco);
+    }
+
+    & a:hover{
+        color: var(--secundario);
+    }
 }
 
-nav i{
-    color: var(--secundario);
-    font-size: 20px;
-    cursor: pointer;
-}
+
 
 .nav-item:hover{
     cursor: pointer;
@@ -35,21 +56,227 @@ nav i{
     width: 100%;
     font-size: 16px;
     color: var(--branco);
+    font-weight: 500;
 }
 
 .nav-item.active a{
     border-bottom: var(--secundario) solid 2px;
     color: var(--secundario);
+    font-weight: 500;
 }
 
 .btn-nav{
     background-color: var(--principal);
     color: var(--secundario);
     border: var(--secundario) solid 1px;
+
+    &:hover{ 
+        color: var(--branco);
+        border: var(--branco) solid 1px;
+        transition: 0.3s;
+    }
 }
 
-.btn-nav:hover{
-    color: var(--branco);
-    border: var(--branco) solid 1px;
+
+
+
+
+/* HOME -------------------------------------------------- */
+#home {
+    background-color: var(--principal);
+    padding: 20px 0px;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    position: relative; /* Necessário para o posicionamento absoluto da forma */
+
+    & span {
+        color: var(--secundario);
+    }
+
+    & h1 {
+        color: var(--branco);
+    }
+
+    & p {
+        font-weight: 500;
+    }
+
+    & button {
+        background-color: var(--secundario);
+        color: var(--branco);
+        padding: 10px;
+        opacity: 0.65;    
+
+        &:hover {
+            opacity: 1;
+            transition: 0.3s;
+            border: var(--branco) solid 1px;
+        }
+    }
+
+    & .d-flex {
+        justify-content: center;
+        flex-wrap: wrap; 
+    }
+
+    & .d-flex button {
+        margin: 0 5px; 
+    }
+
+    & img {
+        z-index: 10; /* Imagem ficará acima da forma */
+    }
 }
 
+.shape {
+    background-color: var(--secundario);
+    width: 40%;
+    height: 80%;
+    position: absolute; /* Posicionamento absoluto para ficar no fundo */
+    border-radius: 40% 30% 0 30%;
+    right: 0;
+    z-index: 0; /* Forma ficará atrás do conteúdo */
+}
+
+
+/* Promoções -------------------------------------------------- */
+#promo{
+    height: 50%; 
+    margin-top: 100px;
+
+    & span{
+    color: red;
+    }
+
+
+    & .card{
+        cursor: default;
+        background-color: var(--principal);
+        color: var(--preto);
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+
+        & .card-body{
+            background-color: var(--branco);
+
+            & a{
+                color: var(--secundario);
+                border: var(--secundario) solid 1px;
+            }
+
+            & a:hover{
+                color: var(--secundario);
+                border: var(--secundario) solid 1px;
+                background-color: var(--principal);
+            }
+        }
+
+        &:hover{
+            
+            & .card-header, .card-footer{
+                opacity: 0.7;
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+
+#separa{
+    height: 100px;
+    background: var(--degrade);
+}
+
+
+/* Cardapio -------------------------------------------------- */
+#cardapio{
+    margin-top: 100px;
+
+    & h2{
+        color: var(--secundario);
+        font-weight: 600;
+    }
+
+    & p.descricao{
+        font-size: 14px;
+    }
+
+    & .card{
+        border-radius: 0 12% 4% 0;
+    }
+
+    & .card img {
+        width: 100%;
+        height: 160px; 
+        object-fit: cover; 
+      }
+
+    & .text-muted{
+        font-size: 16px;
+    }
+
+    & .card:hover{
+        cursor: pointer;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        transition: 0.2s;
+
+        & .card-title, .text-muted{
+            color: var(--secundario) !important;
+        }
+    }
+}
+
+
+#avaliacao{
+    margin-bottom: 100px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        & h3{
+            color: var(--secundario);
+        }
+
+    & #avaliado{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+
+        
+
+        & img{
+            width: 110px;
+            height: 110px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        & i{
+            color: #e9a209;
+        }
+
+        & .stars{
+            gap: 8px;
+        }
+
+        & .espaco{
+            width: 100%;
+            display: flex;
+           justify-content: space-between; 
+        }
+
+        & .tamanho{
+            width: 100%;
+            padding-left: 12px;
+        }
+    }
+}
+  
+
+  
