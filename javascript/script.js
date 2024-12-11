@@ -73,3 +73,95 @@ const produtos = [
   // Chama a função para criar os cards
   document.addEventListener("DOMContentLoaded", criarCards);
   
+
+
+
+
+
+  const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    // Função para atualizar a classe 'active'
+    function updateActiveLink() {
+        let index = sections.length;
+
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.parentNode.classList.remove('active'));
+        navLinks[index].parentNode.classList.add('active');
+    }
+
+    // Detecta rolagem
+    window.addEventListener('scroll', updateActiveLink);
+
+    // Detecta cliques
+    navLinks.forEach((link) => {
+        link.addEventListener('click', function () {
+            navLinks.forEach((link) => link.parentNode.classList.remove('active'));
+            this.parentNode.classList.add('active');
+        });
+    });
+
+
+    ScrollReveal().reveal('.home',{
+      origin: 'left',
+      duration: 2000,
+      distance: '20%'
+    });
+
+
+    ScrollReveal().reveal('.promo',{
+      origin: 'right',
+      duration: 2000,
+      distance: '20%'
+    });
+
+    ScrollReveal().reveal('#cards-container',{
+      origin: 'right',
+      duration: 2000,
+      distance: '30%',
+      delay: 300,
+    });
+
+    ScrollReveal().reveal('.chef',{
+      origin: 'left',
+      duration: 2000,
+      distance: '20%',
+      delay: 100,
+    });
+
+
+    ScrollReveal().reveal('.user1',{
+      origin: 'lright',
+      duration: 2000,
+      distance: '20%',
+    });
+
+    ScrollReveal().reveal('.user2',{
+      origin: 'right',
+      duration: 2000,
+      distance: '20%',
+      delay: 250,
+    });
+
+    ScrollReveal().reveal('.user3',{
+      origin: 'right',
+      duration: 2000,
+      distance: '20%',
+      delay: 500,
+    });
+
+    ScrollReveal().reveal('.icone-cafe',{
+      origin: 'left',
+      duration: 2000,
+      distance: '20%',
+    });
+
+
+
+    
+
+
+
+
+    

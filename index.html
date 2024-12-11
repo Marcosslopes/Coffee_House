@@ -17,6 +17,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>CoffeeHouse</title>
   </head>
 
@@ -59,18 +60,18 @@
     </header>
     
     <section id="home">
-      <div class="shape d-none d-md-block"></div> <!-- Forma colocada aqui -->
+      <div class="shape d-none d-md-block"></div> 
       
-      <div class="container pt-4">
+      <div class="container pt-4 home">
           <div class="row align-items-center mt-4">
               <div class="col-md-6 d-flex flex-column align-items-center">
                   <h1 class="display-4"> <span>Coffee</span>House</h1>
-                  <p class="text-center mt-2">Hoje é dia de se apaixonar por novas combinações de café. Experimente nosso menu especial!</p>
-                  <div class="d-flex gap-2 mt-2">
+                  <p class="text-center mt-3">Hoje é dia de se apaixonar por novas combinações de café. Experimente nosso menu especial!</p>
+                  <div class="d-flex gap-2 mt-4">
                       <a href="#cardapio">
                           <button type="button" class="btn btn-home">Veja o menu</button>
                       </a>
-                      <button type="button" class="btn btn-home">
+                      <button type="button" class="btn btn-tel">
                           <i class="fa-solid fa-phone"></i>(11) 99999-9999
                       </button>
                   </div>
@@ -93,12 +94,12 @@
             <h3>O <span>espírito natalino</span> já chegou ao CoffeeHouse! Venha provar nossos cafés temáticos e aproveite as <span>promoções</span> de final de ano</h3>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6 promo">
             <img class="img-fluid d-none d-md-block" src="imagens/shape.png">
           </div>
 
           <!-- Card de natal -->
-          <div class="col-md-6">
+          <div class="col-md-6 promo">
             <div class="card text-center">
               <div class="card-header">
                 Promoção de natal
@@ -156,15 +157,15 @@
       <div class="container">
         <div class="row align-items-center mt-4">
 
-          <div class="col-md-4">
-
+          <div class="col-lg-4">
+              <img src="imagens/chef.png" class="img-fluid chef">
           </div>
 
-          <div class="col-md-8">
+          <div class="col-lg-8">
             <h3 class="">Avaliações	</h3>
             <h2> O que os clientes falam </h2>
 
-            <div id="avaliado" class="mb-4 mt-4">
+            <div id="avaliado" class="mb-4 mt-4 user1">
 
               <img src="imagens/user.png" class="img-fluid">
 
@@ -180,12 +181,13 @@
                   </div> 
                 </div>
                 
-                <p>Ótimos cafés, com preços super acessíveis </p> 
+                <p>Ótimos cafés, com preços super acessíveis </p>
+                <p class="card-text"><small class="text-muted">09/12/24</small></p> 
               </div>
               
             </div>
 
-            <div id="avaliado">
+            <div id="avaliado" class="user2">
 
               <img src="imagens/user.png" class="img-fluid">
 
@@ -202,11 +204,12 @@
                 </div>
                 
                 <p>Fui e provei o Mocha Natalino, uma delicia!</p> 
+                <p class="card-text"><small class="text-muted">28/11/24</small></p>
               </div>
               
             </div>
 
-            <div id="avaliado" class="mb-4 mt-4">
+            <div id="avaliado" class="mb-4 mt-4 user3">
 
               <img src="imagens/user.png" class="img-fluid">
 
@@ -222,7 +225,8 @@
                   </div> 
                 </div>
                 
-                <p>Fui e provei o Mocha Natalino, uma delicia!</p> 
+                <p>Lugar aconchegante e atendimento de qualidade!</p> 
+                <p class="card-text"><small class="text-muted">02/11/24</small></p>
               </div>
               
             </div>
@@ -232,6 +236,43 @@
         </div>
       </div>
     </section>
+    
+    <footer id="rodape">
+      <img src="imagens/wave.svg" >
+      <div class="container">
+        <div class="row">
+          <i class="fa-solid fa-mug-saucer col-12 text-center icone-cafe">CoffeeHouse</i>
+
+          <hr class="linha">
+          <div class="col-12 text-center redes">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+
+          <hr class="linha">
+
+          <div class="col-md-4 mb-2">
+            <h5>Fale conosco</h5>
+            <p>contato</p>
+            <p>perguntas frequentes</p>
+
+          </div>
+          <div class="col-md-4 mb-2 ">
+            <h5>Sobre</h5>
+            <p>Quem somos</p>
+            <p>Missão e visão</p>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Ajuda</h5>
+            <p>Políticas</p>
+            <p>Suporte</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     
     <script src="javascript/script.js"></script>
   </body>
